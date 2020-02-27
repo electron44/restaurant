@@ -24,7 +24,21 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
+          },
+          {
+            path: 'ajouter',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab2/ajouter/ajouter.module').then( m => m.AjouterPageModule)
+            }]
+          },
+          {
+            path: 'modifier',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab2/modifier/modifier.module').then( m => m.ModifierPageModule)
+            }]
+          },
         ]
       },
       {
