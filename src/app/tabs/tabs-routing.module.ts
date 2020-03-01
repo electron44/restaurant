@@ -39,6 +39,13 @@ const routes: Routes = [
                 loadChildren: () => import('../tab2/modifier/modifier.module').then( m => m.ModifierPageModule)
             }]
           },
+          {
+            path: 'modifier/:id',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab2/modifier/modifier.module').then( m => m.ModifierPageModule)
+            }]
+          },
         ]
       },
       {
@@ -48,7 +55,28 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
+          },
+          {
+            path: 'ajouter',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab3/ajouter/ajouter.module').then( m => m.AjouterPageModule)
+            }]
+          },
+          {
+            path: 'modifier',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab3/modifier/modifier.module').then( m => m.ModifierPageModule)
+            }]
+          },
+          {
+            path: 'modifier/:id',
+            children :[{
+                path: '',
+                loadChildren: () => import('../tab3/modifier/modifier.module').then( m => m.ModifierPageModule)
+            }]
+          },
         ]
       },
       {

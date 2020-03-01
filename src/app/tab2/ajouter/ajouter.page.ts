@@ -24,7 +24,7 @@ export class AjouterPage implements OnInit {
       message: message,
       duration: 2000,
       color: 'success',
-      position: 'top'
+      position: 'bottom'
     });
     toast.present();
   }

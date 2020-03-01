@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier informations restaurants</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="formGroup" (submit)="modifierRestaurant()" *ngIf="restaurant">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Nom</ion-label>
+            <ion-input type = "text " formControlName ="nomRestaurant" ></ion-input>
+            <!-- <ion-text color ="danger" ></ion-text> -->
+            
+          </ion-item>
+          <ion-item> 
+            <ion-label position="floating">Longitude</ion-label>
+            <ion-input  formControlName ="long"></ion-input>           
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Latitude</ion-label>
+              <ion-input  formControlName ="lat"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button type ="submit">Enregistrer</ion-button>
+          </ion-item>
+        </ion-list>
+      </form>
+</ion-content>

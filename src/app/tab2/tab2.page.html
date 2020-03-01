@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 2
+      Plat
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,16 +9,25 @@
 <ion-content [fullscreen]="true">
 
   <ion-list>
+    
     <ion-card *ngFor="let plat of plats">
-      <ion-item (click)="modifierPlat(plat.id)">
+      <ion-item>
         <ion-label slot="start">{{plat.nom}}</ion-label>
-        <ion-label color="success" slot="end">{{plat.prix}}</ion-label>
+        <ion-label color="success">{{plat.prix}}</ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="modifierPlat(plat.id)">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" (click)="delete(plat)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
       </ion-item>
    </ion-card>
   </ion-list>
  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success" routerLink="/tabs/tab2/ajouter">
+    <ion-fab-button color="primary" routerLink="/tabs/tab2/ajouter">
         <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

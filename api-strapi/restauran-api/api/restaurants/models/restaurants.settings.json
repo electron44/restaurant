@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "Restaurants"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nomRestaurant": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    }
+  },
+  "connection": "default",
+  "collectionName": "restaurants"
+}

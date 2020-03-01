@@ -1,0 +1,12 @@
+{
+  "connection": "default",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "Restaurant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {}
+}

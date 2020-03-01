@@ -1,17 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 3
+        Menu
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  
+    <ion-list>
+      <ion-card *ngFor="let restaurant of restaurants">
+          <ion-card-content>
+            <ion-item  >
+              <ion-label>{{restaurant.nomRestaurant}}</ion-label>
+              <ion-icon name="create"  color="warning" (click)="modifierRestaurant(restaurant.id)"></ion-icon>
+              <ion-icon name="trash" color="danger" (click)="deleteRestaurant(restaurant.id)"></ion-icon>
+            </ion-item>
+          </ion-card-content>
+      </ion-card>
+        
+    </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+     <ion-fab-button routerLink="ajouter">
+     <ion-icon name="add"></ion-icon> 
+    </ion-fab-button> 
+  </ion-fab>
 </ion-content>

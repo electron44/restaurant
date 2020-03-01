@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un restaurant</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="ajouterRestaurant()">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Nom</ion-label>
+          <ion-input type = "text" [(ngModel)] ="restaurant.nomRestaurant" name ="nomRestaurant" required minlength = 3 #actor="ngModel"></ion-input>
+        </ion-item>
+        <ion-item> 
+          <ion-label>Longitude</ion-label>     
+          <ion-input [(ngModel)] ="restaurant.longitude" name="longitude"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Latitude</ion-label>
+          <ion-input [(ngModel)] ="restaurant.latitude" name ="latitude"></ion-input>
+        </ion-item>
+          <ion-button type ="submit" shape="round" expand="block">Enregistrer</ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  <agm-map [latitude]="lat" [longitude]="long" [zoom]="15" style="height:300px;">
+    <agm-marker
+      [latitude]="lat"
+      [longitude]="long"
+      (markerClick)="onMarkerClick()"
+    ></agm-marker>
+  </agm-map>
+
+</ion-content>

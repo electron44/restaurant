@@ -1,17 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" scroll-y="true" padding>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card class="ion-margin">
+    <img src="../../assets/img/fataya.jpg" style="width:100%;height:188px;"/>
+    <ion-card-header>
+      <ion-card-subtitle>Fataya Simple</ion-card-subtitle>
+      <ion-card-title>Chez le gouffre</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        1000 F avec fromage
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-margin">
+    <img src="../../assets/img/fataya2.jpg" style="width:100%;height:188px;"/>
+    <ion-card-header>
+      <ion-card-subtitle>Fataya Simple</ion-card-subtitle>
+      <ion-card-title>Chez le gouffre</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        1000 F sans fromage
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-margin" padding>
+    <img src="../../assets/img/fataya3.jpg" style="width:100%;height:188px;"/>
+    <ion-card-header>
+      <ion-card-subtitle>Fataya Simple</ion-card-subtitle>
+      <ion-card-title>Chez le gouffre</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        1500 F sans fromage
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

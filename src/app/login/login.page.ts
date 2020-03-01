@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
       window.localStorage.setItem('token',data.jwt);
       this.router.navigateByUrl(this.service.redirectUrl);
     },error=>{
-      this.utils.presentToast("Nom d'utilisateur incorrect", "danger");
+      this.utils.presentToast("Nom d'utilisateur un mot de passe incorrect", "danger");
     })
   }
 
